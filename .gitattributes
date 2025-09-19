@@ -1,2 +1,112 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+# Student Personal Information
+full_name = "Jordan Smith"
+student_email = "jsmith@ncat.edu"
+Hometown = "Charlotte, NC"
+grad_semester = "Spring 2028"
+Major = "Computer Science"
+
+# lists lines 7 to 10
+current_courses = ["COMP 163", "MATH 150", "ENG 101", "HIS 105"]
+completed_courses = ["Biology", "Chemistry", "Calculus", "Spanish II", "World History"]
+current_credit_hours = [3, 3, 3, 3]
+gpa_history = [3.2, 3.6, 3.4, 3.7]
+
+# Tuples lines 12 to 16
+emergency_contacts = ("Mom", "Hannah Smith", "704-555-0199")
+home_adress = ("456 Oak Street", "Charlotte, NC", "28202")
+instagram_info = ("Instagram", "@jordan_codes", 312)
+twitter_info = ("Twitter", "@jordandev", 127)
+birthday = ("Birthday", 5, 22, 2006)
+
+# sets go from line 18 to line 22
+current_skills = {"Python basics", "HTML", "Problem solving", "Time management", "Photography"}
+skills_to_learn = {"JavaScript", "Data structures", "Git", "Web design", "Public speaking"}
+career_intrests = {"Software development", "Web development", "Data science", "Game development"}
+hobbies = {"Gaming", "Photography", "Reading", "Soccer", "Music"}
+entertainment_backlog = {"One Piece", "Barry", "Life", "Incantation", "Memento"}
+
+# dictionaries start at line 24 and end at line 29
+course_credit_dict = {"COMP 163": 3, "MATH 150": 3, "ENG 101": 3, "HIS 105": 3}
+course_proffesor_dict = {"COMP 163": "Prof. Rhodes", "MATH 150": "Dr. Lee", "ENG 101": "Dr. Martinez", "HIS 105": "Dr. Brown"}
+course_room_dict = {"COMP 163": "M-Eric 300", "MATH 150": "Marteena 201", "ENG 101": "Crosby 121", "HIS 105": "Crosby 210"}
+monthly_budget_dict = {"Food": 450, "Entertainment": 200, "Books": 125, "Transportation": 100}
+per_subject_study_hours_dict = {"Programming": 10, "Math": 8, "English": 4, "History": 3}
+contact_directory_dict = {"Mom": "704-555-0199", "Roommate": "336-555-7821", "Academic Advisor": "336-334-5000"}
+
+# calculations 
+total_credits = sum(current_credit_hours)
+cumultive_gpa = sum(gpa_history) / len(gpa_history)
+completed_courses_count = len(completed_courses)
+total_study_hours = sum(per_subject_study_hours_dict.values())
+Academic_load = total_credits + total_study_hours
+total_monthly_budget = sum(monthly_budget_dict.values())
+daily_food_budget = monthly_budget_dict["Food"] / 30
+annual_budget = total_monthly_budget * 12
+Hourly_study_cost = monthly_budget_dict["Books"] / total_study_hours
+
+# analytical calculations
+total_social_followers = instagram_info[2] + twitter_info[2]
+skills_comparison = len(current_skills) / len(skills_to_learn)
+entertainment_backlog_number = len(entertainment_backlog)
+current_hobbies_count = len(hobbies)
+
+# prints out users information to create profile
+print("================================================================")
+print("             PERSONAL ACADEMIC & LIFE PORTFOLIO ")
+print("================================================================")
+print("Student:", full_name, "| Email:", student_email)
+print("From:", Hometown, "| Graduating:", grad_semester)
+print("Major:", Major)
+print("=== ACADEMIC PROFILE ===")
+print("Current Semester:", total_credits, "credits across", len(current_courses), "courses")
+print(f"Cumulative GPA: {cumultive_gpa:.2f}")
+print("Weekly Study Time:", total_study_hours, "hours")
+print(f"Academic Investment: ${Hourly_study_cost:.1f} per study hour")
+print("=== Current Courses ===")
+print("COMP 163 -", course_credit_dict["COMP 163"], "credits -", course_proffesor_dict["COMP 163"], "-", course_room_dict["COMP 163"])
+print("MATH 150 -", course_credit_dict["MATH 150"], "credits -", course_proffesor_dict["MATH 150"], "-", course_room_dict["MATH 150"])
+print("ENG 101 -", course_credit_dict["ENG 101"], "credits -", course_proffesor_dict["ENG 101"], "-", course_room_dict["ENG 101"])
+print("HIS 105 -", course_credit_dict["HIS 105"], "credits -", course_proffesor_dict["HIS 105"], "-", course_room_dict["HIS 105"])
+print("=== PERSONAL DEVELOPMENT ===")
+print("Current Skills:", current_skills)
+print("Learning Goals:", skills_to_learn)
+print("Career Interests:", career_intrests)
+print("Skills Currently Have:", len(current_skills))
+print("Skills Want to Learn:", len(skills_to_learn))
+print("=== FINANCIAL OVERVIEW ===")
+print("Monthly Budget: $", total_monthly_budget, sep="")
+print("Food: $", monthly_budget_dict["Food"], " ($", f"{daily_food_budget:.1f}", "/day)", sep="")
+print("Entertainment: $", monthly_budget_dict["Entertainment"], sep="")
+print("Books: $", monthly_budget_dict["Books"], sep="")
+print("Transportation: $", monthly_budget_dict["Transportation"], sep="")
+print("Annual Projection: $", annual_budget, sep="")
+print("=== CONNECTIONS & CONTACTS ===")
+print("Emergency Contact:", emergency_contacts[1], "("+emergency_contacts[0]+") -", emergency_contacts[2])
+print("Home Address:", home_adress[0], ",", home_adress[1], home_adress[2])
+print("Social Media Presence:", total_social_followers, "followers across", len([instagram_info, twitter_info]), "platforms")
+print("Key Contacts:", len(contact_directory_dict), "people in directory")
+print("=== LIFE STATISTICS ===")
+print("Total Courses Completed:", completed_courses_count)
+print("Current Academic Load:", Academic_load, "weekly commitments")
+print("Entertainment Backlog:", entertainment_backlog_number, "items")
+print("Current Hobbies:", current_hobbies_count, "activities")
+print("================================================================")
+
+git add Joshua_Evans_assignment_3.py
+git commit -m "Initial portfolio with test data from Part 1"
+
+git add Joshua_Evans_assignment_3.py
+git commit -m "Update personal information with real data"
+
+git add Joshua_Evans_assignment_3.py
+git commit -m "Add real academic data and course information"
+
+git add Joshua_Evans_assignment_3.py
+git commit -m "Customize skills, interests, and career goals"
+
+git add Joshua_Evans_assignment_3.py
+git commit -m "Add personal budget and contact information"
+git push origin main
+
