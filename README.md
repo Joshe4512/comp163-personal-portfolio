@@ -14,4 +14,4 @@ A Python program demonstrating my personal portfolio, including academic data, s
 
 ## How to Run
 ```bash
-python jevans_assignment_3.py
+python Joshua Evans_assignment_3.py
